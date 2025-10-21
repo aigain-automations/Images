@@ -229,10 +229,16 @@
         
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .testimonial {
@@ -240,6 +246,15 @@
             padding: 30px;
             border-radius: 15px;
             position: relative;
+        }
+        
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 3px solid #147fe1;
         }
         
         .testimonial-quote {
@@ -560,6 +575,7 @@
                 <li>Schedule meetings, send emails, and manage contacts using just your voice or text - all from Telegram</li>
                 <li>Real control over your Google/Outlook accounts, not just content creation like other AI tools</li>
                 <li>Works in any language, remembers your preferences, and learns your communication style</li>
+                <li>Get instant answers with web search and real-time weather information - just ask Leeloo anything</li>
             </ul>
         </div>
     </section>
@@ -660,21 +676,31 @@
             
             <div class="testimonial-grid">
                 <div class="testimonial">
+                    <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/Woman1.png" alt="Sarah M." class="testimonial-image">
                     <div class="testimonial-tldr">TLDR: 2 hours saved daily</div>
                     <p class="testimonial-quote">"I used to spend 30 minutes every morning just organizing my inbox and calendar. Now I voice message Leeloo while making coffee and everything is handled before I sit down."</p>
                     <p class="testimonial-author">- Sarah M., Marketing Consultant</p>
                 </div>
                 
                 <div class="testimonial">
+                    <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/Man1.png" alt="David L." class="testimonial-image">
                     <div class="testimonial-tldr">TLDR: No more app switching</div>
                     <p class="testimonial-quote">"The game-changer is that it actually does the work. Other AI tools give me suggestions. Leeloo sends the email, creates the meeting, updates the contact. I just keep moving."</p>
                     <p class="testimonial-author">- David L., Startup Founder</p>
                 </div>
                 
                 <div class="testimonial">
-                    <div class="testimonial-tldr">TLDR: Works in my language</div>
-                    <p class="testimonial-quote">"Je parle français naturellement avec Leeloo et elle gère mon Gmail anglais sans problème. C'est la première vraie assistance multilingue que j'ai trouvée."</p>
+                    <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/Woman2.png" alt="Marie D." class="testimonial-image">
+                    <div class="testimonial-tldr">TLDR: Cross-language magic</div>
+                    <p class="testimonial-quote">"I'm French and currently working in Japan. I can speak Japanese fairly well, but writing is still a challenge for me. That's where Leeloo comes in — it does the job perfectly! For example, I just say: 'Send an email in Japanese to Lola asking her to prepare the PowerPoint for tomorrow's meeting,' and it's done. A real game-changer! It probably saves me around three hours every day."</p>
                     <p class="testimonial-author">- Marie D., International Sales Director</p>
+                </div>
+                
+                <div class="testimonial">
+                    <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/Man2.png" alt="Julien D." class="testimonial-image">
+                    <div class="testimonial-tldr">TLDR: Running business from anywhere</div>
+                    <p class="testimonial-quote">"As a CEO constantly traveling between Paris, New York, and Singapore, Leeloo is my secret weapon. I can manage my entire team's schedule, respond to urgent client emails, and coordinate meetings across time zones—all while waiting for my flight. No laptop needed, just quick voice messages to Leeloo. It's like having my executive assistant available 24/7 in my pocket."</p>
+                    <p class="testimonial-author">- Julien D., CEO</p>
                 </div>
             </div>
         </div>
