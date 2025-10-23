@@ -39,8 +39,35 @@
         .hero {
             background: linear-gradient(135deg, #e8eaf6 0%, #e3f2fd 50%, #e1f5fe 100%);
             color: #13186c;
-            padding: 60px 20px 100px;
+            padding: 30px 20px 60px;
             text-align: center;
+            position: relative;
+        }
+        
+        .hero-image-left {
+            position: absolute;
+            top: 104px;
+            left: 20px;
+            max-width: 250px;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .hero-image-right {
+            position: absolute;
+            top: 130px;
+            right: 20px;
+            max-width: 336px;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 50px;
         }
         
         .logo {
@@ -61,6 +88,9 @@
             margin-bottom: 30px;
             font-weight: 400;
             color: #1565c0;
+            max-width: 64%;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .cta-button {
@@ -118,7 +148,7 @@
         
         /* Social Proof Section */
         .social-proof {
-            padding: 60px 20px;
+            padding: 10px 10px;
             background: linear-gradient(135deg, #e1f5fe 0%, #e3f2fd 50%, #e8eaf6 100%);
             text-align: center;
         }
@@ -441,13 +471,6 @@
             font-size: 1.3rem;
         }
         
-        .module-price {
-            color: #1976d2;
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        
         .module-card ul {
             list-style: none;
             padding: 0;
@@ -561,6 +584,16 @@
             
             .hero .subhead {
                 font-size: 1.2rem;
+                max-width: 100%;
+            }
+            
+            .hero-image-left,
+            .hero-image-right {
+                display: none;
+            }
+            
+            .hero-content {
+                padding: 0 20px;
             }
             
             .problem h2, .solution h2, .testimonials h2, .pricing h2, .modules h2 {
@@ -571,26 +604,51 @@
                 transform: scale(1);
             }
         }
+        
+        @media (max-width: 1200px) and (min-width: 769px) {
+            .hero-image-left {
+                max-width: 180px;
+                top: 107px;
+            }
+            
+            .hero-image-right {
+                max-width: 270px;
+                top: 125px;
+            }
+            
+            .hero-content {
+                padding: 0 40px;
+            }
+            
+            .hero .subhead {
+                max-width: 75%;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/leeloo_logo_v2.png" alt="Leeloo Logo" class="logo">
-            <h1>Your Game-Changing AI Assistant.<br>You Speak. Leeloo Executes.</h1>
-            <p class="subhead">Manages your emails, calendar, contacts and web searches – all through simple voice or text commands. <em>For example, just say on your smartphone: "Reply in Japanese to Ken's last email to confirm I'll attend tomorrow's meeting" – and it's done!</em></p>
-            
-            <a href="#pricing" class="cta-button">See How Leeloo Works</a>
-            <p class="reassurance">Set up in 15 minutes. Free trial available for Starter plan.</p>
-            
-            <ul class="bullet-points">
-                <li>Schedule meetings, send emails, and manage contacts using just your voice or text - all from Telegram</li>
-                <li>Real control over your Google/Outlook accounts, not just content creation like other AI tools</li>
-                <li>Works in any language, remembers your preferences, and learns your communication style</li>
-                <li>Get instant answers with web search and real-time weather information - just ask Leeloo anything</li>
-                <li style="font-style: italic; color: #1976d2;">Additional modules allow you to scan business cards, generate invoices, track expenses, sync with CRM systems, manage tasks in Notion/Asana/Trello, schedule meetings like Calendly, get daily AI-powered summaries, analyze documents with AI, and create your own company knowledge base</li>
-            </ul>
+        <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/leeloo_guy-giving-instructions-to-smartphone.png" alt="Person using smartphone" class="hero-image-left">
+        <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/leeloo_tools-activating.png" alt="Tools activating" class="hero-image-right">
+        
+        <div class="hero-content">
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/aigain-automations/Images/main/leeloo_logo_v2.png" alt="Leeloo Logo" class="logo">
+                <h1>Your Game-Changing AI Assistant.<br>You Speak. Leeloo Executes.</h1>
+                <p class="subhead">Manages your emails, calendar, contacts and web searches – all through simple voice or text commands. <em>For example, just say on your smartphone: "Reply in Japanese to Ken's last email to confirm I'll attend tomorrow's meeting" – and it's done!</em></p>
+                
+                <a href="#pricing" class="cta-button">See How Leeloo Works</a>
+                <p class="reassurance">Set up in 15 minutes. Free trial available for Starter plan.</p>
+                
+                <ul class="bullet-points">
+                    <li>Schedule meetings, send emails, and manage contacts using just your voice or text - all from Telegram</li>
+                    <li>Real control over your Google/Outlook accounts, not just content creation like other AI tools</li>
+                    <li>Works in any language, remembers your preferences, and learns your communication style</li>
+                    <li>Get instant answers with web search and real-time weather information - just ask Leeloo anything</li>
+                    <li style="font-style: italic; color: #1976d2;">Additional modules allow you to scan business cards, generate invoices, track expenses, sync with CRM systems, manage tasks in Notion/Asana/Trello, schedule meetings like Calendly, get daily AI-powered summaries, analyze documents with AI, and create your own company knowledge base</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -802,12 +860,11 @@
     <section class="modules">
         <div class="container">
             <h2>Additional Modules for Business or Expert Plan</h2>
-            <p class="modules-intro">Choose based on your Business (2 modules) or Expert (4 modules) plan. Each module can be purchased separately at $49/month, except for RAG/Knowledge Base which is $98/month.</p>
+            <p class="modules-intro">Choose based on your Business (2 modules) or Expert (4 modules) plan.</p>
             
             <div class="modules-grid">
                 <div class="module-card">
                     <h3>1. Daily Summary & Smart Alerts</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Morning personalized briefing via email and voice</li>
                         <li>Unread emails with priority filtering</li>
@@ -825,7 +882,6 @@
                 
                 <div class="module-card">
                     <h3>2. Business Card Scanner</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Capture business cards via Telegram</li>
                         <li>OpenAI Vision API extraction</li>
@@ -837,7 +893,6 @@
                 
                 <div class="module-card">
                     <h3>3. Document Intelligence</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Analyze PDF, Word, Text, Images</li>
                         <li>Multi-page PDF analysis</li>
@@ -852,7 +907,6 @@
                 
                 <div class="module-card">
                     <h3>4. Invoice Generator</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Create PDF invoices from voice/text</li>
                         <li>Customizable branded templates</li>
@@ -865,7 +919,6 @@
                 
                 <div class="module-card">
                     <h3>5. Expense Tracker</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Scan receipts via photo</li>
                         <li>Auto-categorize expenses</li>
@@ -878,7 +931,6 @@
                 
                 <div class="module-card">
                     <h3>6. Meeting Scheduler Pro</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Calendly-style booking links</li>
                         <li>Availability sharing</li>
@@ -891,7 +943,6 @@
                 
                 <div class="module-card">
                     <h3>7. CRM Sync</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>HubSpot/Salesforce integration</li>
                         <li>Automatic contact syncing</li>
@@ -904,7 +955,6 @@
                 
                 <div class="module-card">
                     <h3>8. Advanced Task Management</h3>
-                    <div class="module-price">$49/month separately</div>
                     <ul>
                         <li>Notion/Asana/Trello integration</li>
                         <li>Project creation from conversations</li>
@@ -917,7 +967,6 @@
                 
                 <div class="module-card">
                     <h3>9. RAG/Knowledge Base</h3>
-                    <div class="module-price">$98/month separately (counts as 2 modules)</div>
                     <ul>
                         <li>Upload company documents, policies, procedures</li>
                         <li>10GB storage in Neon with pgvector</li>
