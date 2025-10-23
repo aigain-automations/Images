@@ -66,6 +66,7 @@
             max-width: 250px;
             width: 100%;
             opacity: 0.9;
+            z-index: 1;
         }
         
         .hero-image-right {
@@ -75,11 +76,12 @@
             max-width: 336px;
             width: 100%;
             opacity: 0.9;
+            z-index: 1;
         }
         
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 50px;
@@ -88,6 +90,8 @@
         .logo {
             max-width: 300px;
             margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
@@ -96,6 +100,8 @@
             margin-bottom: 20px;
             line-height: 1.2;
             color: #2d1b69;
+            position: relative;
+            z-index: 2;
         }
         
         .hero .subhead {
@@ -106,6 +112,8 @@
             max-width: 64%;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 2;
         }
         
         .cta-button {
@@ -120,6 +128,8 @@
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
         }
         
         .cta-button:hover {
@@ -132,6 +142,8 @@
             font-size: 0.9rem;
             opacity: 0.9;
             margin-top: 10px;
+            position: relative;
+            z-index: 2;
         }
         
         .bullet-points {
@@ -142,6 +154,8 @@
             padding: 40px;
             border-radius: 15px;
             list-style: none;
+            position: relative;
+            z-index: 2;
         }
         
         .bullet-points li {
@@ -591,6 +605,8 @@
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.5rem;
+                position: relative;
+                z-index: 2;
             }
             
             .logo {
@@ -598,8 +614,10 @@
             }
             
             .hero .subhead {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 max-width: 100%;
+                position: relative;
+                z-index: 2;
             }
             
             .hero-image-left,
@@ -609,6 +627,37 @@
             
             .hero-content {
                 padding: 0 20px;
+            }
+            
+            .hero::before {
+                opacity: 0.05;
+            }
+            
+            .hero::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.7);
+                z-index: 0;
+            }
+            
+            .bullet-points {
+                background: rgba(255, 255, 255, 0.95);
+                max-width: 100%;
+                padding: 25px;
+            }
+            
+            .cta-button {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .reassurance {
+                position: relative;
+                z-index: 2;
             }
             
             .problem h2, .solution h2, .testimonials h2, .pricing h2, .modules h2 {
